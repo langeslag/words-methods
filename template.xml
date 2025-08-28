@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI [
+  <!ENTITY et "&#x204A;"><!-- TIRONIAN SIGN ET -->
+  <!ENTITY middot "&#x00B7;"><!-- MIDDLE DOT -->
+  <!ENTITY punctelev "&#xF161;"><!-- PUNCTUS ELEVATUS -->
+  <!ENTITY punctvers "&#xF1EA;"><!-- PUNCTUS VERSUS -->
+  <!ENTITY combmacr "&#x0304;"><!-- COMBINING MACRON -->
+  <!ENTITY THORNbarslash "&#xE337;"><!-- LATIN CAPITAL LETTER THORN WITH DIAGONAL STROKE -->
+  <!ENTITY thornbarslash "&#xF149;"><!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+  <!ENTITY Ydot "&#x1E8E;"><!-- LATIN CAPITAL LETTER Y WITH DOT ABOVE -->
+  <!ENTITY ydot "&#x1E8F;"><!-- LATIN SMALL LETTER Y WITH DOT ABOVE -->
+  <!ENTITY Eogon "&#x0118;"><!-- LATIN CAPITAL LETTER E WITH OGONEK -->
+  <!ENTITY eogon "&#x0119;"><!-- LATIN SMALL LETTER E WITH OGONEK -->
+]>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="tei.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Title</title><!-- Title of the work you are editing -->
+        <editor>Your Name</editor><!-- Identify yourself in this line -->
+      </titleStmt>
+      <publicationStmt>
+        <p>Coursework <date>2025</date>; not for distribution.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement></settlement><!-- City of the holding institution, e.g. "London". -->
+            <repository></repository><!-- Name of the holding library, e.g. "British Library". -->
+            <collection></collection><!-- Applies only if the call number includes e.g. "Ashmole",
+            "Bodley", "Cotton", "Hatton", or "Junius". -->
+            <idno></idno><!-- Shelfmark; e.g. "340", "Additional 38651", "Ii. 1. 33", or "Julius
+            E.vii"; you can prefix it with "MS" if you prefer. -->
+          </msIdentifier>
+          <physDesc>
+            <handDesc>
+              <handNote></handNote><!-- If you choose to give a palaeographical account of the hand,
+              do it here. -->
+            </handDesc>
+          </physDesc>
+          <history>
+            <origin></origin><!-- If you choose to report on the manuscript's date and origin, do it
+            here; use <origPlace> and <origDate> if you can. -->
+            <provenance></provenance><!-- If you choose to report on the manuscript's history since
+            its first creation, do it here. -->
+          </history>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <lg>
+        <l n="1">Verse transcription goes here.</l>
+      </lg>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Junicode";
+  src: url("https://langeslag.uni-goettingen.de/fonts/JunicodeVF-Roman.woff2") format("woff2"),
+   	   url("https://langeslag.uni-goettingen.de/fonts/JunicodeTwoBetaVF-Roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EBH Facsimile";
+    src: url("https://langeslag.uni-goettingen.de/fonts/ebh-facsimile.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+  }
+  
+TEI {
+    font-family: "Junicode", serif
+}
+
+titleStmt {
+	margin: 0 1em;
+}
+
+title {
+	display: block;
+	margin: 0 1em;
+    font-size:200%;
+    font-weight: bold;
+}
+
+publicationStmt, sourceDesc {
+    display: none;
+}
+
+editor {
+	display: block;
+	margin: 0 2em;
+}
+
+div, p, lg {
+    display: block;
+    margin-top:1em;
+}
+
+editor:before {
+	content:'edited by ';
+}
+
+text {
+    margin: 1em;
+}
+
+head {
+    display:block;
+    margin: 0.5em 1em;
+    font-weight:bold;
+    font-size:150%;
+}
+
+l {
+	display: block;
+    margin:0 4em;
+}
+
+choice {
+	display:inline-flex;
+}
+
+am {
+    display:none;
+}
+
+ex {
+    font-style: italic;
+}
+
+rdg, witDetail, note {
+	display: none;
+}
+
+[rend*='color(red)'] {
+    color:red;
+}
+
+[rend*='color(green)'] {
+    color:green;
+}
+
+[rend*='color(blue)'] {
+    color:blue;
+}
+
+[rend*='color(purple)'] {
+    color:purple;
+}
