@@ -39,7 +39,7 @@ In all my in-class instruction, I will assume that you are working in [Visual St
 
 ## Installing Git
 
-Git will only be used to distribute course materials, not to submit student work. If you haven't already, you'll want to [install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [configure](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) Git first, following the instructions in [the Pro Git book](https://git-scm.com/book/en/v2). Once you have it installed, configuration can be as simple as entering two lines like the following into your terminal (or entering your name and email into a graphical configuration assistant):
+Git will only be used to distribute course materials, not to submit student work, and in fact you can get by perfectly well without it for the purposes of this course, as long as you keep an eye on any updates to the files on Stud.IP. But for the full experience, you'll want to [install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [configure](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) Git first, following the instructions in [the Pro Git book](https://git-scm.com/book/en/v2). Once you have it installed, configuration can be as simple as entering two lines like the following into your terminal (or entering your name and email into a graphical configuration assistant):
 
 ```bash
 git config --global user.name "Firstname Lastname"
@@ -50,13 +50,13 @@ If you get stuck, you can bypass Git altogether; see [Cloning the Course Reposit
 
 ## Installing VS Code
 
-Look for Visual Studio Code in your operating system's package manager ("app store") or user repository, or else find it at <https://code.visualstudio.com>.
+Look for Visual Studio Code in your operating system's package manager (app store) or user repository, or else find it at <https://code.visualstudio.com>.
 
 Once you have it installed, launch Code and open the extensions manager (`Ctrl+Shift+X`) to install the `XML` extension (by Red Hat). You now have what you need to write XML; see [below](#navigating-vs-code) for a walkthrough of some of the app's key functionality. But first let's get you the course materials.
 
 ## Cloning the Course Repository
 
-To obtain the course files from within VS Code, make sure you close any open projects/folders (File &gt; Close Folder, or `Ctrl+K Ctrl+F`), then navigate to Source Control (`Ctrl+Shift+G`) in the lefthand pane, select "Clone Repository", and paste in `https://github.com/langeslag/words-methods.git`. If Git is correctly set up, the course files should now be downloaded into a folder of your choice and listed in the documents pane. If for any reason you cannot get beyond this step, you can visit <https://github.com/langeslag/words-methods/>, select "Code" and "Download source code: zip", and extract the archive to a location of your choice. That last-resort approach is a little unwieldy if any of the course files are modified during the term, but I have no major changes planned.
+To obtain the course files from within VS Code, make sure you close any open projects/folders (File &gt; Close Folder, or `Ctrl+K Ctrl+F`), then navigate to Source Control (`Ctrl+Shift+G`) in the lefthand pane, select "Clone Repository", and paste in `https://github.com/langeslag/words-methods.git`. If Git is correctly set up, the course files should now be downloaded into a folder of your choice and listed in the documents pane. If for any reason you cannot get beyond this step, you can visit <https://github.com/langeslag/words-methods/>, select "Code" and "Download source code: zip", and extract the archive to a location of your choice (or download the files from Stud.IP, where I have mirrored them). Just remember to redownload any changed files down the road.
 
 # Navigating VS Code
 
@@ -117,7 +117,7 @@ To install Anaconda, head to [anaconda.com](https://www.anaconda.com/) and selec
 --------------------------------------------------------------------------------------
 **NOTE**
 
-Best practice is to set up distinct Python environments for your various Python needs. Since for this course we will only use a bare minimum of Python libraries, there is no need to do so; but you can read up on the process [here](https://docs.anaconda.com/navigator/tutorials/manage-environments/#creating-a-new-environment) if you're interested. If you do create a custom environment, going forward you'll always need to check that the same environment is activated, as libraries installed in one environment won't exist in another.
+Best practice is to set up distinct Python environments for your various Python needs. Since for this course we will only use a bare minimum of Python libraries, there is no need to do so; but you can read up on the process [here](https://docs.anaconda.com/navigator/tutorials/manage-environments/#creating-a-new-environment) if you're interested. If you do create a custom environment, going forward you'll always need to check that the correct environment is activated, as libraries installed in one environment won't exist in another.
 --------------------------------------------------------------------------------------
 
 ## Preparing VS Code for Python and Jupyter
