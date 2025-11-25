@@ -1,22 +1,21 @@
+@namespace url(http://www.tei-c.org/ns/1.0);
+@namespace xml url(http://www.w3.org/XML/1998/namespace);
+
 @font-face {
-  font-family: "Junicode";
-  src: url("https://langeslag.uni-goettingen.de/fonts/JunicodeVF-Roman.woff2") format("woff2"),
+  font-family: "Junicode VF";
+  src: local("Junicode"),
+       url("https://langeslag.uni-goettingen.de/fonts/JunicodeVF-Roman.woff2") format("woff2"),
    	   url("https://langeslag.uni-goettingen.de/fonts/JunicodeTwoBetaVF-Roman.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: "EBH Facsimile";
-    src: url("https://langeslag.uni-goettingen.de/fonts/ebh-facsimile.otf") format("opentype");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
+    src: local("EBH Facsimile"),
+	     url("https://langeslag.uni-goettingen.de/fonts/ebh-facsimile.otf") format("opentype");
   }
   
 TEI {
-    font-family: "Junicode", serif
+    font-family: "Junicode VF", serif;
 }
 
 titleStmt {
