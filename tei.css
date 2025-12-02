@@ -2,7 +2,7 @@
 @namespace xml url(http://www.w3.org/XML/1998/namespace);
 
 @font-face {
-  font-family: "Junicode VF";
+  font-family: "Junicode";
   src: local("Junicode"),
        url("https://langeslag.uni-goettingen.de/fonts/JunicodeVF-Roman.woff2") format("woff2"),
    	   url("https://langeslag.uni-goettingen.de/fonts/JunicodeTwoBetaVF-Roman.ttf") format("truetype");
@@ -15,7 +15,7 @@
   }
   
 TEI {
-    font-family: "Junicode VF", serif;
+    font-family: "Junicode", serif;
 }
 
 titleStmt {
