@@ -50,7 +50,7 @@ If you get stuck, you can bypass Git altogether; see [Cloning the Course Reposit
 
 ## Installing VS Code
 
-Look for Visual Studio Code in your operating system's package manager (app store) or user repository, or else find it at <https://code.visualstudio.com>.
+Look for Visual Studio Code in your operating system's package manager (app store) or user repository, or else find it at <https://code.visualstudio.com>. Please note that several implementations of the app are available, and keyboard shortcuts given below will not work on all of them, or in all language editions.
 
 Once you have it installed, launch Code and open the extensions manager (`Ctrl+Shift+X`) to install the `XML` extension (by Red Hat). You now have what you need to write XML; see [below](#navigating-vs-code) for a walkthrough of some of the app's key functionality. But first let's get you the course materials.
 
@@ -66,7 +66,7 @@ VS Code provides a great many keybindings. So many, in fact, that it has to rely
 
 ## File Templates
 
-VS Code lacks a native approach to file templates. The easiest solution is simply for you to duplicate `template.xml` manually and edit the new file only. Make sure not to make any changes to the template file itself, or to any of the other files provided, as these are tracked by Git, so conflicts will ensue if you change them locally and then try to update your working copy.
+VS Code lacks a native approach to file templates. The easiest solution is simply for you to duplicate `template.xml` manually and edit the new file only. Make sure not to make any changes to the template file itself, or to any of the other files provided, as these are tracked by Git, so conflicts will ensue if you change them locally and then try to update your working copy. To return your working copy to its original state as downloaded, enter `git reset --hard` (this will not affect untracked files, so your own files should be safe).
 
 ## Custom Keybindings
 
@@ -122,37 +122,31 @@ Best practice is to set up distinct Python environments for your various Python 
 
 ## Preparing VS Code for Python and Jupyter
 
-To turn VS Code into a Python editor, open the extensions manager (`Ctrl+Shift+X`) and install the extensions entitled Python (by Microsoft), Python Environments (by Microsoft; agree to install the pre-release if no final release is available), and Jupyter (by Microsoft). _If you cannot find Python Environments, it may be because you have installed the open-source implementation of VS Code rather than the proprietary Microsoft release._ 
+To turn VS Code into a Python editor, open the extensions manager (`Ctrl+Shift+X`) and install the extensions entitled Python (by Microsoft), Python Environments (by Microsoft; agree to install the pre-release if no final release is available), and Jupyter (by Microsoft). _If you cannot find Python Environments, it may be because you have installed the open-source implementation of VS Code rather than the proprietary Microsoft release. You can try installing another Python environments extension, such as that by Solarzano-JuanJose, and see how you fare._ 
 
 ## Package Management
 
-Python package management is traditionally done from the command line, using the command `conda` (or `pip` if that's your preference). In VS Code, with our repository folder open, select "Terminal" and "New Terminal" (or Ctrl+Shift+`` ` `` on US keyboards) to open a terminal window with the current folder as its working directory. You can install individual packages by issuing commands like `conda install lexicalrichness`; but our repository contains a file `requirements.txt` listing all the packages used for your homework. To install all of these with `conda`, issue
+For Python package management, you have three options available to you. If you lack experience working on the command line, you may use Anaconda Navigator to install and manage libraries in the Environments tab, or in your Jupyter notebook you can issue commands like `!conda install matplotlib` directly within your code cells to install the library called `matplotlib`.
 
-```bash
-conda install --file requirements.txt
-```
+Traditionally, however, Python package management is done from the command line, using the command `conda` (or `pip` if you are working without Anaconda). To go this way from within VS Code, with our repository folder open, select "Terminal" and "New Terminal" (or Ctrl+Shift+`` ` `` on US keyboards) to open a terminal window with the current folder as its working directory. You can install individual packages by issuing commands like `conda install matplotlib`.
 
-from within the repository folder. Please take note of any errors you encounter; these will generally result from conflicts between installed and required packages. Also remember that if you have activated a virtual environment for this folder (e.g. by selecting it in Anaconda), packages are installed in that virtual environment, whereas if you haven't, they are installed to your global Python installation or Anaconda base environment. Either way, packages are only available from within the environment in which they were installed.
+If in your work you ever encounter an error along the lines of `ModuleNotFoundError: No module named 'gensim'`, simply install the missing package (`conda install gensim` on the command line, or `!conda install gensim` in your notebook) and get on with your work.
+
+Remember that if you have activated a virtual environment for this folder (e.g. by selecting it in Anaconda), packages are installed in that virtual environment, whereas if you haven't, they are installed to your global Python installation or Anaconda `base` environment. Either way, packages are only available from within the environment in which they were installed.
 
 ## JupyterLab Remote: The Python Fallback Option
 
-If you are new to all this, and setting up Python, Jupyter, and Git is beyond you, you may alternatively choose to do the Python part of your work in-browser in GWDG's remote JupyterLab instance at <https://jupyter-cloud.gwdg.de>, following the instructions in [Appendix 2: JupyterLab Remote Walkthrough]. # Navigating VS Code
+If you are new to all this, and setting up Python, Jupyter, and Git is beyond you, you may alternatively choose to do the Python part of your work in-browser in GWDG's remote JupyterLab instance at <https://jupyter-cloud.gwdg.de>, following the instructions in [Appendix 2: JupyterLab Remote].
 
 # Appendix 1: Python without Anaconda
 
 If you prefer to use the more traditional `pip` package manager over `conda`, you will want to go over the [installation instructions at Real Python](https://realpython.com/installing-python/), or at least the briefer installation notes at the top of VS Code's [Get Started With Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial). You will have to install Jupyter Notebooks separately. Basic installation instructions are at [jupyter.org](https://jupyter.org/install), but they assume you are comfortable with Python package management already; `pip` instructions are [here](https://pip.pypa.io/en/stable/getting-started/), and even they assume you know to open a terminal (in Windows, use PowerShell) and issue your commands there; as per usual, the relevant [Real Python article](https://realpython.com/what-is-pip/) has more detail. If you want to create a custom Python environment using `pip`, consult [the relevant Real Python article](https://realpython.com/intro-to-pyenv/) for guidance.
 
-To install the Python libraries required as part of our course, issue the following command from within the main project folder and with the correct Python environment activated:
-
-```bash
-pip install -r requirements.txt
-```
-
 # Appendix 2: JupyterLab Remote
 
 If you run into any insurmountable issues when trying the local install, you can take the Python part of your work online. Since JupyterLab doesn't have an XML editor, however, you'll still want to do all your XML work locally in VS Code or a similar editor, so please follow the above instructions to the extent that you can.
 
-One drawback to JupyterLab is that although your work is safely stored, Python packages are lost between sessions and will have to be reinstalled every time you do a stint of work (though since we won't use all that many libraries as part of this course, that shouldn't be too great an obstacle). In fact, an advantage of the GWDG environment is that it allows your instructor to reproduce any issues exactly, and all demo notebooks used in the course have been tested against it, whereas your instructor cannot help you with any local package conflicts or other software issues if you install Python on your own system. Additionally, the remote option saves you from having to set up Python, Jupyter, and Git yourself.
+One drawback to JupyterLab is that although your work is safely stored, Python packages are lost between sessions and will have to be reinstalled every time you do a stint of work (though since we won't use all that many libraries as part of this course, that shouldn't be too great an obstacle). In fact, an advantage of the GWDG environment is that it allows your instructor to reproduce any issues exactly, <!--and all demo notebooks used in the course have been tested against it, -->whereas your instructor cannot help you with any local package conflicts or other software issues if you install Python on your own system. Additionally, the remote option saves you from having to set up Python, Jupyter, and Git yourself.
 
 ## Accessing JupyterLab Remote
 
@@ -170,10 +164,10 @@ This should create a folder `words-methods/` and populate it with our course fil
 
 ![JupyterLab's interface: file system on the left, launcher on the right.](img/launcher.png){#fig:interface}
 
-If the course materials should ever be updated in the course of the term, you'll have to update your working copy to take advantage of these changes. To do so, enter the `words-methods/` folder in the file system, launch a terminal window, and enter `git pull`. Once the line `Writing objects` reaches 100%, your working copy is up to date and you can close the window. If you receive a warning that your working copy contains changes not in the master branch, that's where Git gets more complicated; [try this guide](https://rogerdudler.github.io/git-guide/#checkout-replace). Do make sure not to lose any files you have yourself created; this can be avoided by writing only to files with file names other than those tracked by the repository.
+If the course materials should ever be updated in the course of the term, you'll have to update your working copy to take advantage of these changes. To do so, enter the `words-methods/` folder in the file system, launch a terminal window, and enter `git pull`. Once the line `Writing objects` reaches 100%, your working copy is up to date and you can close the window. If you receive a warning that your working copy contains changes not in the master branch, you can override changes you made to the distributed files by issuing `git reset --hard`. Do make sure not to lose any files you have yourself created; this can be avoided by writing only to files with file names other than those tracked by (which in our case are those originally supplied as part of) the repository.
 
 ## Package Management
 
 Our textbooks assume that you have access to a Python package manager, usually `pip` or `conda`, on the command line. GWDG's remote instance of JupyterLab in fact incorporates `pip` directly into the interpreter, so to install a Python package like `lexicalrichness` you can type `!pip install lexicalrichness` directly into your notebook or console, or you can take the more conventional route and do your package management from within a terminal window using commands like `pip install lexicalrichness`.
 
-The remote instance of JupyterLab does not save your Python libraries: the next time you log in, your packages will be gone. To install all the packages required for this course before you start a stint of work, you can open a terminal window and run `pip install -r requirements.txt` from within the `words-methods/` folder. Alternatively, you can just install the ones you need at any given time (e.g. `pip install pandas matplotlib`). Likewise, if in your work you ever encounter an error along the lines of `ModuleNotFoundError: No module named 'gensim'`, simply install the missing package (`pip install gensim`) and get on with your work.
+The remote instance of JupyterLab does not save your Python libraries: the next time you log in, your packages will be gone. You might therefore want to have one or more `!pip install` commands in your first code cell (the command can have multiple arguments), and run this cell once when starting a stint of work. Likewise, if in your work you ever encounter an error along the lines of `ModuleNotFoundError: No module named 'gensim'`, simply install the missing package (`pip install gensim` on the command line, or `!pip install gensim` in your notebook) and get on with your work.
