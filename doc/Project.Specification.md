@@ -29,7 +29,7 @@ As part of your project, you will write a brief scholarly introduction of 300 wo
 
 # Encoding Specification
 
-## Mandatory Markup
+## Basic Markup
 
 Your text or excerpt should be encoded following the [TEI P5 standard](https://tei-c.org/guidelines/p5/) on the basis of the template supplied in the course repository, with at least the following features:
 
@@ -48,25 +48,25 @@ You are expected to mark up your text with at least two of the following three a
 
 The format of your lemma and POS references is up to you; we will discuss some of the options in class.
 
-## Additional Markup
+## Optional Markup
 
 You are encouraged, but not required, to encode any further type of information you encounter, such as named entities (`<persName>`{.xml}, `<placeName>`{.xml}, `<name>`{.xml}).
 
 # Styling
 
-Your project should include a customization of the CSS stylesheet template supplied in the course repository. Your document should render appropriately.
+Your project should include a customization of the CSS stylesheet template supplied in the course repository. Your document should render appropriately. The CSS requirement is an opportunity to showcase originality and initiative.
 
 # Processing and Evaluation
 
 Your portfolio should include one or more Jupyter notebooks demonstrating at least the following features, each amply documented in a markdown cell and/or code comments:
 
 - Retrieval of your XML text nodes into lists of tokens, preserving such structures as verse lines or paragraphs;
-- A metadata structure encoding such features as part of speech, lemmata, and/or metrical data alongside the text of each token, stored under `tokens[0]['lemma']` etc. alongside `tokens[0]['text']`;
+- A metadata structure encoding such features as part of speech, lemmata, and/or metrical data alongside the text of each token, stored under `tokens[0]['lemma']` etc. alongside `tokens[0]['form']`;
 - Some basic statistics on tokens and metadata (e.g. token count, lexical diversity, words/syllables per verse line, metrical counts);
 - Comparison of at least two features with a modest comparable corpus sourced elsewhere (e.g. TF-IDF vectors, lexical diversity, words/syllables per verse line, metrical counts);
-- At least four graphs visualizing these data, at least two of which should involve the broader corpus.
+- At least four graphs (of at least two different kinds) visualizing these data, at least two of which should involve the broader corpus.
 
-# Submission
+# Submission and Assessment
 
 Whereas the regular homework you upload to Stud.IP serves only as a progress check, students of [B.Eng.611](https://flexnow2.uni-goettingen.de/modulbeschreibungen/120927.pdf) will additionally submit (by the FlexNow deadline) the definitive version of their portfolios by email as a ZIP, RAR, or `tar.gz` archive containing the following files:
 
@@ -75,3 +75,24 @@ Whereas the regular homework you upload to Stud.IP serves only as a progress che
 - One or more Jupyter notebooks demonstrating the rest of the work required, saved after running (i.e. with the output cells showing the desired output).
 
 If you rely on a large, conventional external corpus (e.g. ASPR, DOEC, YCOE, YCOEP, CME, Corpus corporum) for your comparative data, and haven't had to modify that corpus to meet your needs except as demonstrated in the notebooks you submit, don't include the corpus in your submission. If, on the other hand, you have established a small custom corpus e.g. by manually copying text from your browser, include that corpus in a subfolder. In either scenario, carefully document in your notebooks how you obtained and modified the corpus.
+
+When finalizing your project for assessment under [B.Eng.611](https://flexnow2.uni-goettingen.de/modulbeschreibungen/120927.pdf), you would be well advised to consider the following marking grid, which indicates the most important aspects informing your grade, but not their weighting:
+
+Aspect														 1	 2	 3	 4	 5	 6	 7	 8	 9	 10
+-----------------------------------------------------------	---	---	---	---	---	---	---	---	---	----
+XML: valid to TEI specification
+XML: markup requirements met
+XML: completeness and presentation of TEI header content
+CSS: extent of styling
+Python: requirements met
+Python: documentation
+Python: demonstrating an understanding of the code
+Python: diligence in visualization
+Presentation: effort
+Presentation: contextualization
+Presentation: technical insight
+XML, CSS, Python, Presentation: initiative
+
+Table: Marking grid
+
+You will note that while some of these are binaries (requirements met or not), others are rather a measure of your ambition (extent of markup/styling). This is especially true of the final entry, initiative, which allows you to compensate for the occasional shortcoming by developing your project beyond specifications.
