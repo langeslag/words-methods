@@ -97,9 +97,11 @@ The following resources may help you find a manuscript passage for your project:
 
   (Near-complete index of Old English manuscripts and fragments.)
 
+<!--
 - [Resources for Old English Prose](https://roep.web.ox.ac.uk/)
 
   (Overviews of Old English prose works.)
+  -->
 
 - [Corpus of Middle English Prose and Verse](https://quod.lib.umich.edu/c/cme/)
 
